@@ -11,6 +11,9 @@ Não precisa instalar nada nem saber programar. Só um navegador. 🙌
 
 ---
 
+# ALTERAÇÃO A PEDIDO DO PO PARA ALTERAR A COR DO SITE PARA LARANJA PARA MELHOR VISUALIZAÇÃO DO CONTEÚDO - PEDIDO ISSUE #5
+
+
 ## 🧠 A ideia
 
 ```mermaid
