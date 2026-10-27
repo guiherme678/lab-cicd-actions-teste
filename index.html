@@ -37,13 +37,37 @@
     code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
     footer { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: .85rem; }
   </style>
+  <style>
+  body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.modo-noturno {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+
+  body.modo-noturno button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+  }
+
+  #botao-tema {
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+</style>
 </head>
 <body>
   <main class="cartao">
     <div class="emoji">💚</div>
     <h1>Vai Palmeiras!</h1>
     <p>VERDE, BRANCO E VERMELHO</p>
-
+<button id="botao-tema">🌙 Ativar modo noturno</button>
+    
     <div class="versao">
       🤖 <strong>Publicado pelo robô em:</strong> __DATA__<br>
       🔖 <strong>Commit:</strong> <code>__COMMIT__</code><br>
@@ -55,5 +79,18 @@
       Prof. Marcelino Dias da Silva
     </footer>
   </main>
+  <script>
+  const botao = document.getElementById("botao-tema");
+
+  botao.addEventListener("click", function () {
+    document.body.classList.toggle("modo-noturno");
+
+    if (document.body.classList.contains("modo-noturno")) {
+      botao.textContent = "☀️ Ativar modo claro";
+    } else {
+      botao.textContent = "🌙 Ativar modo noturno";
+    }
+  });
+</script>
 </body>
 </html>
