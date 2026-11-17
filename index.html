@@ -3,29 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vai Palmeiras !</title>
+  <title>Site Descontinuado - Vai Palmeiras!</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
       font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-      background: #7b2cbf;
+      background: linear-gradient(135deg, #075c35, #1e9e5a);
       padding: 1rem;
+      transition: background 0.3s, color 0.3s;
     }
+
     .cartao {
       background: #fff;
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 2.5rem;
-      max-width: 520px;
+      max-width: 540px;
       width: 100%;
       box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
       text-align: center;
       color: #1d1d1f;
     }
-    .emoji { font-size: 4rem; }
-    h1 { margin: .5rem 0; color: #1e9e5a; }
+
+    .emoji {
+      font-size: 4rem;
+    }
+
+    h1 {
+      margin: .5rem 0;
+      color: #1e9e5a;
+    }
+
+    .aviso {
+      background: #fff0f0;
+      border: 2px solid #e05252;
+      border-radius: 14px;
+      padding: 1.3rem;
+      margin: 1.5rem 0;
+      color: #8b2222;
+    }
+
+    .aviso h2 {
+      margin: 0 0 .6rem;
+      font-size: 1.3rem;
+    }
+
+    .data {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #c62828;
+      margin: .7rem 0;
+    }
+
+    .mensagem {
+      line-height: 1.6;
+      color: #555;
+    }
+
     .versao {
       margin-top: 1.5rem;
       padding: 1rem;
@@ -34,63 +75,136 @@
       text-align: left;
       line-height: 1.8;
     }
-    code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
-    footer { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: .85rem; }
+
+    code {
+      background: #e5e5ea;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    #botao-tema {
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px 0;
+      border: none;
+      background: #075c35;
+      color: white;
+      font-size: .95rem;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e5ea;
+      color: #6e6e73;
+      font-size: .85rem;
+      line-height: 1.6;
+    }
+
+    /* Modo noturno */
+    body.modo-noturno {
+      background: linear-gradient(135deg, #101010, #242424);
+    }
+
+    body.modo-noturno .cartao {
+      background: #252525;
+      color: #f5f5f5;
+    }
+
+    body.modo-noturno .aviso {
+      background: #3a2020;
+      border-color: #e05252;
+      color: #ffbaba;
+    }
+
+    body.modo-noturno .data {
+      color: #ff7777;
+    }
+
+    body.modo-noturno .mensagem,
+    body.modo-noturno footer {
+      color: #ccc;
+    }
+
+    body.modo-noturno .versao {
+      background: #383838;
+    }
+
+    body.modo-noturno code {
+      background: #505050;
+      color: white;
+    }
+
+    body.modo-noturno h1 {
+      color: #55d98b;
+    }
   </style>
-  <style>
-  body {
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  body.modo-noturno {
-    background-color: #121212;
-    color: #f5f5f5;
-  }
-
-  body.modo-noturno button {
-    background-color: #333;
-    color: white;
-    border: 1px solid #777;
-  }
-
-  #botao-tema {
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 10px 0;
-  }
-</style>
 </head>
+
 <body>
+
   <main class="cartao">
+
     <div class="emoji">💚</div>
+
     <h1>Vai Palmeiras!</h1>
+
     <p>VERDE, BRANCO E VERMELHO</p>
-<button id="botao-tema">🌙 Ativar modo noturno</button>
-    
+
+    <button id="botao-tema">
+      🌙 Ativar modo noturno
+    </button>
+
+    <section class="aviso">
+      <h2>⚠️ Aviso de descontinuação</h2>
+
+      <p>
+        Informamos que este site será oficialmente
+        encerrado na seguinte data:
+      </p>
+
+      <div class="data">20/11/2026</div>
+
+      <p>
+        Após essa data, o site não estará mais disponível
+        para acesso. Agradecemos a todos que fizeram parte
+        dessa jornada!
+      </p>
+    </section>
+
+    <p class="mensagem">
+      Obrigado pela visita e pela confiança.
+      Este projeto chega ao fim, mas seu registro
+      permanecerá disponível em nosso repositório.
+    </p>
+
     <div class="versao">
-      🤖 <strong>Publicado pelo robô em:</strong> __DATA__<br>
-      🔖 <strong>Commit:</strong> <code>__COMMIT__</code><br>
-      👤 <strong>Enviado por:</strong> __AUTOR__
+      🤖 <strong>Publicado pelo robô em:</strong> _DATA_<br>
+      🔖 <strong>Commit:</strong> <code>_COMMIT_</code><br>
+      👤 <strong>Enviado por:</strong> _AUTOR_
     </div>
 
     <footer>
       🎓 UNINOVE · Automação de Processos · DevOps<br>
       Prof. Marcelino Dias da Silva
     </footer>
+
   </main>
+
   <script>
-  const botao = document.getElementById("botao-tema");
+    const botao = document.getElementById("botao-tema");
 
-  botao.addEventListener("click", function () {
-    document.body.classList.toggle("modo-noturno");
+    botao.addEventListener("click", function () {
+      document.body.classList.toggle("modo-noturno");
 
-    if (document.body.classList.contains("modo-noturno")) {
-      botao.textContent = "☀️ Ativar modo claro";
-    } else {
-      botao.textContent = "🌙 Ativar modo noturno";
-    }
-  });
-</script>
+      if (document.body.classList.contains("modo-noturno")) {
+        botao.textContent = "☀️ Ativar modo claro";
+      } else {
+        botao.textContent = "🌙 Ativar modo noturno";
+      }
+    });
+  </script>
+
 </body>
 </html>
